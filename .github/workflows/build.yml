@@ -1,4 +1,4 @@
-name: CI/CD library release
+name: CI/CD library build
 
 on:
   push:
