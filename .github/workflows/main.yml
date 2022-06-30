@@ -2,6 +2,7 @@ name: CI/CD library
 
 on:
   push:
+    branches-ignore: ["master"]
   workflow_dispatch:
 
 jobs:

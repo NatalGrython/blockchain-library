@@ -3,6 +3,8 @@ name: CI/CD library release
 on:
   push:
     branches: ["master"]
+  pull_request:
+    branches: ["master"]
   workflow_dispatch:
 
 jobs:
@@ -35,3 +37,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16.x"
+      - name: create-tag
+        run: npm run release
