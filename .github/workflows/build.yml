@@ -8,6 +8,7 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release)') }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
@@ -43,3 +44,7 @@ jobs:
         run: npm ci
       - name: create-tag
         run: npm run release
+      - name: pushed
+        run: git push
+      - name: pushed tags
+        run: git push --follow-tags origin master
