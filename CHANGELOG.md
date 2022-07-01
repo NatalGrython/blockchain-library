@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.31 (2022-07-01)
+
+
+### Bug Fixes
+
+* fix ci/cd ([5479d0a](https://github.com/NatalGrython/blockchain-library/commit/5479d0a569163b0cb584ed2ae8a8de967e9bd077))
+
 ### 0.0.30 (2022-07-01)
 
 
