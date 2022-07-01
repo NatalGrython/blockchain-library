@@ -61,6 +61,10 @@ jobs:
       - name: build
         run: npm run build
       - name: login npm
-        run: npm run login -u ${{ secrets.NPM_NAME }} -p ${{ secrets.NPM_PASSWORD }}
+        run: npm run login
+        env:
+          NPM_USER: ${{ secrets.NPM_NAME }}
+          NPM_PASS: ${{ secrets.NPM_PASSWORD }}
+          NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
       - name: publish
         run: npm publish
