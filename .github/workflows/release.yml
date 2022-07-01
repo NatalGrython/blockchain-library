@@ -1,7 +1,7 @@
 name: CI/CD library release
 
 on:
-  push:
+  create:
     tags:
       - v*
 
