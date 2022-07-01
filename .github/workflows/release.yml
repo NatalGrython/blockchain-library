@@ -61,7 +61,7 @@ jobs:
       - name: build
         run: npm run build
       - name: registry
-        run: npm config set registry http://registry.npmjs.org
+        run: npm config set registry https://registry.npmjs.org
       - name: auth token npm
         run: npm config set _authToken=${{ secrets.NPM_TOKEN }}
       - name: publish
